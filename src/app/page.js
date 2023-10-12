@@ -1,3 +1,6 @@
+import Renderer from '@/components/Renderer';
+import { homeLayout } from '@/layouts/home.layout';
+
 export default function Home() {
-  return <h1>Hello world</h1>;
+  return <Renderer layout={homeLayout} />;
 }
