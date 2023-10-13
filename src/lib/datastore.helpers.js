@@ -11,7 +11,7 @@ export function datastoreBuilder(gqlQuery, variables = {}, policies = {}) {
             $config: {
               type: 'graphql',
               name: DEFAULT_STORE_REFERENCE,
-              baseUrl: '/graphql',
+              baseUrl: '/api/graphql',
               [DEFAULT_STORE_NAME]: [print(gqlQuery)],
               variables,
               policies,

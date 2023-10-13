@@ -1,27 +1,12 @@
 import { startServerAndCreateNextHandler } from '@as-integrations/next';
 import { ApolloServer } from '@apollo/server';
-import { gql } from 'graphql-tag';
 import RedactieAPI from '@/services/redactie.api';
+import { graphQLTypeDefs } from '@/services/graphql/graphql.type.defs';
+import { graphQLResolvers } from '@/services/graphql/graphql.resolvers';
 
-const resolvers = {
-  Query: {
-    homePage: (_, __, { dataSources }) => {
-      return dataSources.redactieAPI.getSiteTitle();
-    },
-  },
-};
+const resolvers = graphQLResolvers;
 
-const typeDefs = gql`
-  #custom types
-  scalar JSON
-  # Pages
-  type HomePage {
-    title: JSON
-  }
-  type Query {
-    homePage: HomePage
-  }
-`;
+const typeDefs = graphQLTypeDefs;
 
 const server = new ApolloServer({
   resolvers,

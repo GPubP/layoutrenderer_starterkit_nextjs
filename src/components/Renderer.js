@@ -7,14 +7,14 @@ import { DefaultLayoutProviderTypes } from '@layout-renderer/layout-provider';
 
 import { widgets as defaultWidgets } from '@/widgets';
 
-export const Renderer = ({ layout, data = {}, layoutProvider, debug = true }) => {
+export const Renderer = ({ layout, data = {}, widgets = defaultWidgets, layoutProvider, debug = true }) => {
   return (
     <LayoutRenderer
       layout={layout}
       datastores={DataStoreTypes}
       layoutProviderTypes={DefaultLayoutProviderTypes}
       layoutProvider={layoutProvider}
-      widgets={defaultWidgets}
+      widgets={widgets}
       data={data}
       debug={debug}
     />

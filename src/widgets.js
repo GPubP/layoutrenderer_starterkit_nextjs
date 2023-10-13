@@ -46,10 +46,10 @@ import {
 
 export const widgets = [
   { type: 'AlertWidget', component: AlertWidget },
-  //   {
-  //     type: 'TextLineWidget',
-  //     component: TextLineWidget,
-  //   },
+  // {
+  //   type: 'TextLineWidget',
+  //   component: TextLineWidget,
+  // },
   //   {
   //     type: 'TextBoxWidget',
   //     component: TextBoxWidget,
@@ -177,10 +177,10 @@ export const widgets = [
   //     type: 'CarouselWidget',
   //     component: SlideshowWidget,
   //   },
-  //   {
-  //     type: 'FieldGroupWidget',
-  //     component: FieldGroupWidget,
-  //   },
+  // {
+  //   type: 'FieldGroupWidget',
+  //   component: FieldGroupWidget,
+  // },
   //   {
   //     type: 'TableWidget',
   //     component: TableWidget,
@@ -201,14 +201,14 @@ export const widgets = [
   //     type: 'BreadcrumbsWidget',
   //     component: BreadcrumbsWidget,
   //   },
-  //   {
-  //     type: 'SectionWidget',
-  //     component: SectionWidget,
-  //   },
-  //   {
-  //     type: 'CardWidget',
-  //     component: CardWidget,
-  //   },
+  // {
+  //   type: 'SectionWidget',
+  //   component: SectionWidget,
+  // },
+  // {
+  //   type: 'CardWidget',
+  //   component: CardWidget,
+  // },
   //   {
   //     type: 'HighlightWidget',
   //     component: HighlightWidget,
