@@ -1,12 +1,13 @@
 import { startServerAndCreateNextHandler } from '@as-integrations/next';
 import { ApolloServer } from '@apollo/server';
 import { gql } from 'graphql-tag';
+import RedactieAPI from '@/services/redactie.api';
 
 const resolvers = {
   Query: {
-    homePage: () => ({
-      title: { text: 'Hello', type: 'heading-1', showAs: 'heading-2' },
-    }),
+    homePage: (_, __, { dataSources }) => {
+      return dataSources.redactieAPI.getSiteTitle();
+    },
   },
 };
 
@@ -27,6 +28,8 @@ const server = new ApolloServer({
   typeDefs,
 });
 
-const handler = startServerAndCreateNextHandler(server);
+const handler = startServerAndCreateNextHandler(server, {
+  context: (req, res) => ({ req, res, dataSources: { redactieAPI: new RedactieAPI() } }),
+});
 
 export { handler as POST };

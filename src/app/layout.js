@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Digipolis Starterkit NextJS',
+  title: 'Digipolis - Starterkit NextJS',
   description: 'Starterkit NextJS - LayoutRenderer - Redactie',
 };
 

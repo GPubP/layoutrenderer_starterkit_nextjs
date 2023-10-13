@@ -24,7 +24,8 @@ export const homeLayout = {
           id: 'warning-alert',
           component: 'AlertWidget',
           attributes: {
-            description: 'Ik ben een AlertWidget in een WrapperWidget gerenderd met de Layout Renderer.',
+            description:
+              'Ik ben een AlertWidget in een WrapperWidget gerenderd met de Layout Renderer. Mijn titel wordt opgehaald uit de redactie (WCM) en doorgegeven aan de front-end via GraphQL.',
             showCloseButton: true,
           },
           ...defaultDatastoreSelector({ title: 'homePage.title' }),
