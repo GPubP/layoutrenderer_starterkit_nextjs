@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@apollo/server": "^4.9.4",
+    "@as-integrations/next": "^2.0.2",
     "@layout-renderer/core": "^5.0.0-alpha.19",
     "@layout-renderer/datastores": "^5.0.0-alpha.19",
     "@layout-renderer/layout-provider": "^5.0.0-alpha.19",
