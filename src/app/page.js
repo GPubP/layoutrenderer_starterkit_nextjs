@@ -9,7 +9,7 @@ export default function Home() {
           <a href="/redactie">LayoutRenderer met GraphQL & Redactie integratie voorbeeld</a>
         </li>
         <li className="u-margin-bottom-xs">
-          <a href="/provider">LayoutRenderer met LayoutProvider voorbeeld</a>
+          <a href="/provider">LayoutRenderer met Statisch LayoutProvider voorbeeld</a>
         </li>
       </ul>
     </div>

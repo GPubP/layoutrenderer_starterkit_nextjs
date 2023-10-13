@@ -1,0 +1,45 @@
+{
+  "widgets": [
+    {
+      "component": "WrapperWidget",
+      "attributes": {},
+      "children": [
+        {
+          "id": "section-examples",
+          "component": "SectionWidget",
+          "attributes": {
+            "background": "white",
+            "padding": ["md"]
+          },
+          "children": [
+            {
+              "id": "textLineDemo",
+              "component": "FieldGroupWidget",
+              "attributes": {
+                "slot": "content",
+                "margin": ["md-bottom"]
+              },
+              "children": [],
+              "generateChildren": {
+                "fromAttribute": "items",
+                "asContent": true,
+                "withLayout": {}
+              }
+            }
+          ],
+          "datastores": {
+            "astad-content": {
+              "$ref": "astad-content"
+            }
+          },
+          "state": {
+            "widgetContent": {
+              "datastore": "astad-content",
+              "selector": ["result", "section-examples", "value"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

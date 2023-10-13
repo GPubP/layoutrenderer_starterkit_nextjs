@@ -1,0 +1,47 @@
+{
+  "type": "static",
+  "debug": true,
+  "placeholder": {
+    "component": "TextLineWidget",
+    "attributes": {
+      "type": "paragraph",
+      "text": "Laden..."
+    }
+  },
+  "error": {
+    "component": "TextLineWidget",
+    "attributes": {
+      "type": "paragraph",
+      "text": "Fout bij het laden",
+      "classNames": ["u-text-danger"]
+    },
+    "state": {
+      "text": {
+        "datastore": "error",
+        "selector": ["message"]
+      }
+    }
+  },
+  "rules": [
+    {
+      "id": "rule-0",
+      "name": "button",
+      "layoutId": "button",
+      "conditions": [{ "path": ["text"], "operator": "startsWith", "value": "ALARM" }]
+    },
+    {
+      "id": "rule-1",
+      "name": "textline",
+      "layoutId": "text-line",
+      "conditions": [{ "path": ["type"], "operator": "startsWith", "value": "heading-" }]
+    }
+  ],
+  "layouts": {
+    "text-line": {
+      "component": "TextLineWidget"
+    },
+    "button": {
+      "component": "AlertWidget"
+    }
+  }
+}
