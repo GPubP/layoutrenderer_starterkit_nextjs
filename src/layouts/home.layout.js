@@ -1,16 +1,17 @@
 // import { gql } from '@apollo/client';
-// import { datastoreBuilder, defaultDatastoreSelector } from '../lib/datastore.helpers';
+import { gql } from 'graphql-tag';
+import { datastoreBuilder, defaultDatastoreSelector } from '@/lib/datastore.helpers';
 
-// export const homePageQuery = gql`
-//   query {
-//     homePage {
-//       title
-//     }
-//   }
-// `;
+export const homePageQuery = gql`
+  query {
+    homePage {
+      title
+    }
+  }
+`;
 
 export const homeLayout = {
-  //   datastores: datastoreBuilder(homePageQuery),
+  datastores: datastoreBuilder(homePageQuery),
   widgets: [
     {
       id: 'home-wrapper',
@@ -26,7 +27,7 @@ export const homeLayout = {
             description: 'Ik ben een AlertWidget in een WrapperWidget gerenderd met de Layout Renderer.',
             showCloseButton: true,
           },
-          //   ...defaultDatastoreSelector({ title: 'homePage.title' }),
+          ...defaultDatastoreSelector({ title: 'homePage.title' }),
         },
       ],
     },
