@@ -19,7 +19,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Content of repo
 
 - Starter kit for working with LayoutRender and redactie (WCM) using NextJS.
-- Example 1: Getting data from Redactie and serving it to the front-end via GraphQL (if your ENV variables are correct you should seetthe name of your WCM site as the title of the `AlertWidget`).
+- Example 1: Getting data from Redactie and serving it to the front-end via GraphQL (if the ENV variables are correct you should see the name of your WCM site as the title of the `AlertWidget`).
 - Example 2: Using (static) rules to render some widgets. In real application layout rules can be provided by GraphQL (using techniques from `Example 1`).
 
 ## Learn More
