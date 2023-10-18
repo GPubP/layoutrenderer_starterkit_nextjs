@@ -1,33 +1,15 @@
-'use client';
-import {
-  AlertWidget,
-  FieldGroupWidget,
-  SectionWidget,
-  TextBoxWidget,
-  TextLineWidget,
-  WrapperWidget,
-} from '@layout-renderer/widgets';
+import dynamic from 'next/dynamic';
 
-export const widgets = [
-  { type: 'AlertWidget', component: AlertWidget },
-  {
-    type: 'TextLineWidget',
-    component: TextLineWidget,
-  },
-  {
-    type: 'TextBoxWidget',
-    component: TextBoxWidget,
-  },
-  {
-    type: 'WrapperWidget',
-    component: WrapperWidget,
-  },
-  {
-    type: 'FieldGroupWidget',
-    component: FieldGroupWidget,
-  },
-  {
-    type: 'SectionWidget',
-    component: SectionWidget,
-  },
+const WIDGETS_LIST = [
+  'AlertWidget',
+  'FieldGroupWidget',
+  'SectionWidget',
+  'TextBoxWidget',
+  'TextLineWidget',
+  'WrapperWidget',
 ];
+
+export const widgets = WIDGETS_LIST.map((w) => ({
+  type: w,
+  component: dynamic(() => import('@layout-renderer/widgets/widgets.js').then((widg) => widg[w]), { ssr: false }),
+}));
