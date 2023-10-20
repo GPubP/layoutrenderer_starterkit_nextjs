@@ -11,6 +11,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## ENV Variables
 
+Define ENV variables in `.env` file (create the file if it don't exist).
+
+Required ENV variables:
+
 - API_GW_URL=https://api-gw-a.antwerpen.be
 - WCM_BASE_PATH=/acpaas/wcm-proxy/v4
 - WCM_API_KEY=<YOUR_API_KEY>
